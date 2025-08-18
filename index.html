@@ -1,0 +1,2195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BootstrapProject1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+  body{
+    font-family: "Poppins", sans-serif;
+  }
+  #card-visible{
+    top: 96%;
+  }
+  #card-items:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    #card-visible{
+      visibility: visible !important;
+      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+      z-index: 5;
+      
+    }
+  } 
+  #custom-button{
+    width: 40px;
+    height: 40px;
+  }
+  #fav-button:hover{
+    background-color: black;
+    color: white;
+  }
+</style>
+</head>
+  <!-- -----------------------------------------------------body start here------------------------------------------------------------- -->
+  <body>
+    <!-- -------------------------nav bar------------------------------------ -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="row w-100 m-0">
+          <div class="col-12 col-xl-2 text-center my-3">
+            <img src="images/logo.svg" alt="" />
+            <a class="navbar-brand" href="#"></a>
+            <button
+              class="btn fs-4 navbar-toggler-icon"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasTop"
+              aria-controls="offcanvasTop"
+            ></button>
+          </div>
+          <div class="col col-12 col-xl-5 my-auto ">
+              <ul class="navbar my-auto d-flex  justify-content-center g-4">
+                  <select name="" id="" class="form-select w-auto me-3 mb-2 mb-sm-0 border-0">
+                    <option value="" disabled selected>All Category</option>
+                    <option value="">Grocerries</option>
+                    <option value="">Drinks</option>
+                    <option value="">Chocolates</option>
+                  </select>
+                <form class="d-flex" role="search">
+                  <input
+                    class="form-control border-0 rounded-3"
+                    type="search"
+                    placeholder="Search for more than 20000"
+                    aria-label="Search"
+                  />
+                  <button class="btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass fs-4"></i>
+                  </button>
+                </form>
+              </ul>
+          </div>
+          <div class="col col-sm-6 col-xl-3 my-auto d-flex justify-content-evenly">
+
+              <li class="nav-link ">
+                <a
+                  class="nav-link active me-2 m-md-0 fw-bold fs-5"
+                  aria-current="page"
+                  href="#"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item nav-link dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="fw-bold text-black fs-5">PAGES</span>
+                </a>
+                <ul class="dropdown-menu border-0 p-2">
+                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">ABOUT US</a></li>
+                  <li>
+                    <a class="dropdown-item text-secondary" href="#">SHOP</a>
+                  </li>
+                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">SINGLE PRODUCT</a></li>
+                  <li><a class="dropdown-item text-secondary " href="#">CART</a></li>
+                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">CHECKOUT</a></li>
+                  <li><a class="dropdown-item text-secondary " href="#">BLOG</a></li>
+                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">SIGNLE POST</a></li>
+                  <li><a class="dropdown-item text-secondary" href="#">STYLES</a></li>
+                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">CONTACT</a></li>
+                  <li><a class="dropdown-item text-secondary" href="#">THANK YOU</a></li>
+                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">MY ACCOUNT</a></li>
+                  <li><a class="dropdown-item text-secondary" href="#">404 ERROR</a></li>
+                  
+                  
+                </ul>
+              </li>
+          </div>
+          <div class="col  col-xl-2 d-flex justify-content-evenly">
+            <a class="nav-link active fs-4 my-auto" aria-current="page" href="#"
+              ><i class="fa-solid fa-user"></i
+            ></a>
+            <a
+              class="nav-link active fw-bold my-auto fs-4"
+              aria-current="page"
+              href="#"
+              ><i class="fa-solid fa-bookmark"></i
+            ></a>
+            <button
+              class="btn border-0 fs-3 fa-solid fa-store"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasCart"
+              aria-controls="offcanvasTop"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+     <!-- 
+     -->
+     <!-- 
+      -->
+    <!-- -------------------------------LEFT category offcanvas---------------------------------->
+    <div class="offcanvas offcanvas-start h-100"
+      tabindex="-1"
+      id="offcanvasTop"
+      aria-labelledby="offcanvasTopLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel">MENU</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <table class="table table-hover table-striped">
+            <tbody>
+              <tr>
+                <td>
+            <a class="nav-link" href=""
+              ><i class="fa-solid fa-apple-whole me-3 fs-3"></i>Fruits and
+              vegetables</a
+            >
+                </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-egg me-3 fs-3"></i>Dairy and Eggs</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td >
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-drumstick-bite me-3 fs-3"></i>Meat and
+              Poultry</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-fish-fins me-3 fs-3"></i>Seafood</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-bread-slice me-3 fs-3"></i>Bakery and Bread</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-bong me-3 fs-3"></i>Canned Goods</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-bowl-food me-3 fs-3"></i></i>Frozen Foods</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-bowl-rice me-3 fs-3"></i>Pasta and rice</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-apple-whole me-3 fs-3"></i>Breakfast Foods</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-burger me-3 fs-3"></i>Snacks and Chips</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                 <a class="nav-link" href=""
+              ><i class="fa-solid fa-wine-bottle me-3 fs-3"></i></i>Beverages</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-mortar-pestle me-3 fs-3"></i></i>Spices and Seasonings</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-baby me-3 fs-3"></i></i>Baby Food and Formula</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-star-of-life me-3 fs-3"></i></i>Health and Wellness</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-house-chimney-crack me-3 fs-3"></i></i>Household Supplies</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-laptop me-3 fs-3"></i></i>Personal Care</a
+            >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="nav-link" href=""
+              ><i class="fa-solid fa-paw me-3 fs-3"></i>Pet Food and Supplies</a
+            >
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      <!-- 
+     -->
+     <!-- 
+      -->
+    <!-- -----------------------------RIGHT cart offcanvas ------------------------------------->
+    <div
+      class="offcanvas offcanvas-end offcanvas h-100"
+      tabindex="-1"
+      id="offcanvasCart"
+      aria-labelledby="offcanvasTopLabel"
+    >
+    <button
+          type="button"
+          class="btn-close w-100"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      <div class="offcanvas-header">
+        <div class="col offcanvas-title d-flex justify-content-between"> <h3 class="text-success my-auto">Your cart</h3>
+        <h3 class="bg-success rounded-circle px-2 text-white">3</h3></div>
+      </div>
+      <div class="offcanvas-body">
+        <div class="container">
+          <table class="table w-100 table-borderless table-hover">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-6"><h5>Growers cider</h5>
+                    <p class="text-secondary">Brief description</p></div>
+                    <div class="col-6 text-end">$12</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-6"><h5>Fresh grapes</h5>
+                    <p class="text-secondary">Brief description</p></div>
+                    <div class="col-6 text-end">$8</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-8"><h5>Heinz tomato ketchup</h5>
+                    <p class="text-secondary">Brief description</p></div>
+                    <div class="col-4 text-end">$5</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="d-flex justify-content-between bg-success-subtle">
+                  <h5>Total(USD)</h5>
+                  <h5>$25</h5>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-success w-100">Continue to checkout</button>
+        </div>
+
+      </div>
+    </div>
+    <!-- 
+     -->
+     <!-- 
+      -->
+    <!-- -------------------------Landing page body -------------------------------------------- -->
+     <div class="container-fluid" style="background-image: url(images/banner-1.jpg); background-size: cover;">
+      <div class="row pt-5 m-0 g-0">
+        <div class="col-lg-6">
+      <h1 class="display-1 fw-bold pt-5"><span class="text-success">Organic</span>Foods at</h1>
+      <h1 class="display-1">your <span class="fw-bold">Doorsteps</span></h1>
+      <p class="fs-4 text-secondary">Dignissim massa diam elementum</p>
+      <div class="col my-4">
+        <button class="btn btn-success p-3 rounded-5 mb-sm-0 mb-2 ">START SHOPPING</button>
+        <button class="btn btn-dark p-3 rounded-5 mb-sm-0 mb-2" >JOIN NOW</button>
+
+      </div>
+      <div class="row">
+        <div class="col-5 col-sm-2"><h1>14k+</h1></div>
+        <div class="col-7 col-sm-2"><p>PRODUCT VARIETIES</p></div>
+        <div class="col-5 col-sm-2"><h1>50k+</h1></div>
+        <div class="col-7 col-sm-2"><p>HAPPY CUSTOMERS</p></div>
+        <div class="col-5 col-sm-2"><h1>10k+</h1></div>
+        <div class="col-7 col-sm-2"><p>STORE LOCATIONS</p></div>
+      </div>
+     </div>
+      </div>
+      <div class="container-fluid text-white">
+        <div class="row text-center m-0">
+          <div class="col-12 col-sm-4 pt-4 bg-success">
+            <div class="row m-0">
+            <div class="col-12 col-md-3 "><i class="display-3 mt-md-3 fa-solid fa-recycle"></i></i></div>
+            <div class="col"><h5>Fresh from farm</h5>
+            <p>Lorem ipsum dolor sit amet,consectetur</p>
+          <p>adipi elit.</p></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4 pt-4 bg-info">
+            <div class="row m-0">
+            <div class="col-12 col-md-3"><i class="display-3 mt-md-3 fa-solid fa-leaf"></i></i></div>
+            <div class="col"><h5>100% Organic</h5>
+            <p>Lorem ipsum dolor sit amet,consectetur</p>
+          <p>adipi elit.</p></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-4 pt-4 bg-warning">
+            <div class="row m-0">
+            <div class="col-12 col-md-3"><i class="display-3 mt-md-3 fa-regular fa-truck"></i></i></div>
+            <div class="col"><h5>Free delivery</h5>
+            <p>Lorem ipsum dolor sit amet,consectetur</p>
+          <p>adipi elit.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+     <!-- 
+     -->
+     <!-- 
+      -->
+<!-- ----------------------- main carousel scroll page category ---------------------------------- -->
+     <div class="container-fluid">
+        <div class="row px-lg-4 pt-5 pb-3">
+            <div class="col-12 col-md-12 col-lg-8 col-xl-9"><h2>Category</h2></div>
+            <div class="col-5 col-sm-3 col-md-2 h-75 my-auto text-md-end"><button class="btn btn-success">View All</button></div>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-1 position-relative d-flex justify-content-">
+              <button class="carousel-control-prev bg-success rounded-2 my-auto" id="custom-button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next bg-success rounded-2 my-auto" id="custom-button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                 <span class="visually-hidden">Next</span>
+                  </button>
+        </div>
+       </div>
+     </div>
+<!-- ------------------------------------control-- ------------------------------------>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="50000">
+    <div class="carousel-inner">
+      <!-- --------------------------------------------cariusel item 1---------------------------------- -->
+        <div class="carousel-item active">
+              <div class="row card-wrapper">
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                      <img src="images/category-thumb-1.jpg" class="card-img-top p-4 rounded-circle" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-center">Fruits & Veges</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                      <img src="images/category-thumb-2.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-center">Breads & Sweets</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                      <img src="images/category-thumb-3.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                    <div class="card-body">
+                     <h6 class="card-title text-center">Juices</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                    <img src="images/category-thumb-4.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                     <div class="card-body">
+                     <h6 class="card-title text-center">Beverages</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                    <img src="images/category-thumb-5.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                    <div class="card-body">
+                     <h6 class="card-title text-center">Meat products</h6>
+                    </div>
+                  </div>
+                      <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                <img src="images/category-thumb-6.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title text-center">Breads</h6>
+                </div>
+              </div>
+                    </div>
+      </div>
+      <!-- --------------------------------------------carousel-item 2------------------------------------------ -->
+       <div class="carousel-item">
+              <div class="row card-wrapper">
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                      <img src="images/category-thumb-6.jpg" class="card-img-top p-4 rounded-circle" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-center">Fruits & Veges</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                      <img src="images/category-thumb-5.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-center">Breads & Sweets</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                      <img src="images/category-thumb-4.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                    <div class="card-body">
+                     <h6 class="card-title text-center">Juices</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                    <img src="images/category-thumb-3.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                     <div class="card-body">
+                     <h6 class="card-title text-center">Beverages</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                    <img src="images/category-thumb-2.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                    <div class="card-body">
+                     <h6 class="card-title text-center">Meat products</h6>
+                    </div>
+                  </div>
+                      <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                <img src="images/category-thumb-1.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title text-center">Breads</h6>
+                </div>
+              </div>
+                    </div>
+      </div>
+      <!-- ----------------------------------------------------carousel-item3------------------------------------------- -->
+      <div class="carousel-item">
+              <div class="row card-wrapper">
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                      <img src="images/category-thumb-1.jpg" class="card-img-top p-4 rounded-circle" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-center">Fruits & Veges</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                      <img src="images/category-thumb-2.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-center">Breads & Sweets</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                      <img src="images/category-thumb-3.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                    <div class="card-body">
+                     <h6 class="card-title text-center">Juices</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                    <img src="images/category-thumb-4.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                     <div class="card-body">
+                     <h6 class="card-title text-center">Beverages</h6>
+                    </div>
+                  </div>
+                  <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                    <img src="images/category-thumb-5.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                    <div class="card-body">
+                     <h6 class="card-title text-center">Meat products</h6>
+                    </div>
+                  </div>
+                      <div class="card col col-6 col-sm-4 col-md-2 border-0">
+                <img src="images/category-thumb-6.jpg" class="card-img-top rounded-circle p-4" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title text-center">Breads</h6>
+                </div>
+              </div>
+                    </div>
+      </div>
+  </div>
+</div>
+      <!--
+      -->
+      <!-- 
+        -->
+<!-- ---------------------------- first card products -------------------------------->
+      <div class="container-fluid d-flex row g-0 row-cols-md-2 row-cols-1 justify-content-between px-4 py-5">
+        <h2 class="col">Best selling products</h2>
+        <button class="btn col-sm-2 col-md-2  col-5 bg-success text-white ms-2 ms-md-0">View All</button>
+      </div>
+                    <!-- cards -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 m-0">
+        <div class="col">
+          <div class="card position-relative text-center border-0"   id="card-items">
+            <img src="images/product-thumb-1.png" class="card-img-top px-5 pt-3" alt="">
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+              <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+            </div>
+                <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                  <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                  <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                </div>
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card position-relative text-center border-0"   id="card-items">
+            <img src="images/product-thumb-2.png" class="card-img-top px-5 pt-3" alt="">
+            <div class="card-body">
+              <h6 class="card-text">Whole Grain oatmeal</h6>
+              <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(41)</p>
+              <p class="fs-5"><s class="text-secondary">%54.00</s><b>$50.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+            </div>
+                <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                  <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                  <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                </div>
+            
+          </div>
+        </div><div class="col">
+          <div class="card position-relative text-center border-0"   id="card-items">
+            <img src="images/product-thumb-3.png" class="card-img-top px-5 pt-3" alt="">
+            <div class="card-body">
+              <h6 class="card-text">Sharp Cheddar cheese Block</h6>
+              <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(32)</p>
+              <p class="fs-5"><s class="text-secondary">%14.00</s><b>$12.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+            </div>
+                <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                  <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                  <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                </div>
+            
+          </div>
+        </div><div class="col">
+          <div class="card position-relative text-center border-0"   id="card-items">
+            <img src="images/product-thumb-4.png" class="card-img-top px-5 pt-3" alt="">
+            <div class="card-body">
+              <h6 class="card-text">organic baby Spinach</h6>
+              <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+              <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+            </div>
+                <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                  <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                  <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                </div>
+            
+          </div>
+        </div><div class="col">
+          <div class="card position-relative text-center border-0"   id="card-items">
+            <img src="images/product-thumb-5.png" class="card-img-top px-5 pt-3" alt="">
+            <div class="card-body">
+              <h6 class="card-text">Organic Spinach leaves(Fresh produce)</h6>
+              <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+              <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+            </div>
+                <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                  <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                  <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                </div>
+            
+          </div>
+        </div><div class="col">
+          <div class="card position-relative text-center border-0"   id="card-items">
+            <img src="images/product-thumb-6.png" class="card-img-top px-5 pt-3" alt="">
+            <div class="card-body">
+              <h6 class="card-text">Fresh Salmon</h6>
+              <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(24)</p>
+              <p class="fs-5"><s class="text-secondary">%24.00</s><b>$8.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+            </div>
+                <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                  <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                  <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                </div>
+            
+          </div>
+        </div><div class="col">
+          <div class="card position-relative text-center border-0"   id="card-items">
+            <img src="images/product-thumb-7.png" class="card-img-top px-5 pt-3" alt="">
+            <div class="card-body">
+              <h6 class="card-text">Imported Italian Spaghetti Pasta</h6>
+              <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(42)</p>
+              <p class="fs-5"><s class="text-secondary">%24.00</s><b>$38.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+            </div>
+                <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                  <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                  <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                </div>
+            
+          </div>
+        </div><div class="col">
+          <div class="card position-relative text-center border-0 d-flex flex-column align-items-center"   id="card-items">
+            <img src="images/product-thumb-8.png" class="pt-3" alt="" height="200px" width="140px">
+            <div class="card-body">
+              <h6 class="card-text">Granny Smith Apples</h6>
+              <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(142)</p>
+              <p class="fs-5"><s class="text-secondary">%12.00</s><b>$40.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+            </div>
+                <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                  <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                  <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                </div>
+            
+          </div>
+        </div><div class="col">
+          <div class="card position-relative text-center border-0"   id="card-items">
+            <img src="images/product-thumb-9.png" class="card-img-top px-5 pt-3" alt="">
+            <div class="card-body">
+              <h6 class="card-text">Organic 2% Reduced Fat Milk </h6>
+              <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(26)</p>
+              <p class="fs-5"><s class="text-secondary">%24.00</s><b>$35.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+            </div>
+                <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                  <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                  <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                </div>
+            
+          </div>
+        </div><div class="col">
+          <div class="card position-relative text-center border-0"   id="card-items">
+            <img src="images/product-thumb-10.png" class="card-img-top px-5 pt-3" alt="">
+            <div class="card-body">
+              <h6 class="card-text">Greek Style plain Yogurt</h6>
+              <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(37)</p>
+              <p class="fs-5"><s class="text-secondary">%24.00</s><b>$75.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+            </div>
+                <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                  <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                  <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                </div>
+            
+          </div>
+        </div>
+        
+
+    </div>
+    <!--
+      -->
+      <!-- 
+        -->
+<!--------------------------3 image section-------------------------------------  -->
+<div class="container-fluid mt-5 p-5 text-white">
+  <div class="row d-flex gap-3 gap-lg-0">
+    <div class="col-md-12 col-lg-7 p-5" style="background-image: url(images/banner-ad-1.jpg);" >
+      <h2 class="pt-5 mt-0 mt-lg-5">Items on SALE</h2>
+      <p>Discounts up to 30%</p>
+      <h4><a class="nav-link pb-lg-5 mb-lg-5" href="#" >SHOP NOW</a></h4>
+    </div>
+    <div class="col-lg-5 col-md-12 ps-lg-5 ">
+      <div class="row h-100 d-flex gap-3">
+        <div class="col-12 p-5" style="background-image: url(images/banner-ad-2.jpg); background-size: cover;">
+          <h4 class=""><b>Combo offers</b></h4>
+          <p>Discounts up to 50%</p>
+          <h4><a class="nav-link" id="animate-link" href="#" >SHOP NOW</a></h4>
+
+        </div>
+        <div class="col-12 p-5" style="background-image: url(images/banner-ad-3.jpg); background-size: cover">
+          <h4><b>Discount Coupons</b></h4>
+          <p>Discounts up to 40%</p>
+          <h4><a class="nav-link" href="#" >SHOP NOW</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+-->
+<!-- 
+-->
+ <!-- --------------------------second carousel-------------------------- -->
+  <div class="container-fluid">
+        <div class="row px-lg-4 pt-5 pb-3">
+            <div class="col-12 col-md-12 col-lg-8 col-xl-9"><h2>Featured products</h2></div>
+            <div class="col-5 col-sm-3 col-md-2 h-75 my-auto text-md-end"><button class="btn btn-success">View All</button></div>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-1 position-relative d-flex justify-content-">
+              <button class="carousel-control-prev bg-success rounded-2 my-auto" id="custom-button" type="button" data-bs-target="#carouselControlssecond" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next bg-success rounded-2 my-auto" id="custom-button" type="button" data-bs-target="#carouselControlssecond" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                 <span class="visually-hidden">Next</span>
+                  </button>
+        </div>
+       </div>
+     </div>
+<!-- ------------------------------control------------------------------- -->
+ <div id="carouselControlssecond" class="carousel slide" data-bs-ride="carousel" data-bs-interval="50000">
+    <div class="carousel-inner">
+      <!-- --------------------------------------------cariusel item 1---------------------------------- -->
+    <div class="carousel-item pb-5 active">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 m-0">
+            <div class="col">
+              <div class="card position-relative text-center border-0"   id="card-items">
+                <img src="images/product-thumb-10.png" class="card-img-top px-5 pt-3" alt="">
+                <div class="card-body">
+                  <h6 class="card-text">Greek Style Plain Yogurt</h6>
+                  <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                  <p class="fs-5"><s class="text-secondary">%24.00</s><b>$36.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                </div>
+                    <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                    <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                      <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                      <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                    </div>
+                
+              </div>
+            </div>
+            <div class="col">
+              <div class="card position-relative text-center border-0"   id="card-items">
+                <img src="images/product-thumb-2.png" class="card-img-top px-5 pt-3" alt="">
+                <div class="card-body">
+                  <h6 class="card-text">Pure Squeezed No pulp Orange Juice</h6>
+                  <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(41)</p>
+                  <p class="fs-5"><s class="text-secondary">%54.00</s><b>$50.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                </div>
+                    <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                    <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                      <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                      <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                    </div>
+                
+              </div>
+            </div><div class="col">
+              <div class="card position-relative text-center border-0"   id="card-items">
+                <img src="images/product-thumb-3.png" class="card-img-top px-5 pt-3" alt="">
+                <div class="card-body">
+                  <h6 class="card-text">Sharp cheddar Cheese Block</h6>
+                  <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(32)</p>
+                  <p class="fs-5"><s class="text-secondary">%14.00</s><b>$12.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                </div>
+                    <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                    <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                      <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                      <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                    </div>
+                
+              </div>
+            </div>
+            <div class="col">
+              <div class="card position-relative text-center border-0"   id="card-items">
+                <img src="images/product-thumb-4.png" class="card-img-top px-5 pt-3" alt="">
+                <div class="card-body">
+                  <h6 class="card-text">Organic baby Spinach</h6>
+                  <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                  <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                </div>
+                    <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                    <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                      <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                      <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                    </div>
+                
+              </div>
+        </div>
+            <div class="col">
+              <div class="card position-relative text-center border-0"   id="card-items">
+                <img src="images/product-thumb-5.png" class="card-img-top px-5 pt-3" alt="">
+                <div class="card-body">
+                  <h6 class="card-text">Organic Spinach Leaves(Fresh Produce)</h6>
+                  <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(252)</p>
+                  <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                </div>
+                    <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                    <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                      <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                      <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                    </div>
+                </div>
+                
+              </div>
+          </div>
+      </div>
+      <!-- ----------------------------------------second slide----------------------- -->
+         <div class="carousel-item pb-5">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 m-0">
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-10.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-2.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div><div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-3.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-4.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-5.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        </div>
+                        
+                      </div>
+          </div>
+      </div>
+<!-- ---------------------------slide item3 ----------------->
+ <div class="carousel-item pb-5">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 m-0">
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-10.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-2.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div><div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-3.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-4.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-5.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        </div>
+                        
+                      </div>
+          </div>
+      </div>
+
+
+  </div>   
+ </div>  
+<!--
+-->
+<!-- 
+ -->
+<!-- ---------------------form start here-------------------------------- -->
+<div class="container-fluid py-5 px-4">
+  <div class="contanier d-flex justify-content-center" style="background-image: url(images/banner-newsletter.jpg); background-size: cover;" >
+    <div class="row row-cols-md-2 row-cols-1 w-75">
+      <div class="col py-lg-5 pt-5 my-md-5 text-white">
+        <h1>Get 25% Discount on</h1>
+        <h1>your first purchase</h1>
+        <p>Just Sign Up & register it now to become member</p>
+      </div>
+      <div class="col py-5 my-md-5">
+        <form action="" class="d-flex flex-column gap-3">
+          <input class="form-control rounded-0 p-2" type="text" placeholder="Name">
+          <input class="form-control rounded-0 p-2" type="email" placeholder="Email">
+          <button class="btn p-2 btn-secondary rounded-0 text-white">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+-->
+<!-- 
+ -->
+  <!-- --------------------------third carousel-------------------------- -->
+  <div class="container-fluid">
+        <div class="row px-lg-4 pt-5 pb-3">
+            <div class="col-12 col-md-12 col-lg-8 col-xl-9"><h2>Most popular products</h2></div>
+            <div class="col-5 col-sm-3 col-md-2 h-75 my-auto text-md-end"><button class="btn btn-success">View All</button></div>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-1 position-relative d-flex justify-content-">
+              <button class="carousel-control-prev bg-success rounded-2 my-auto" id="custom-button" type="button" data-bs-target="#carouselControlsthird" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next bg-success rounded-2 my-auto" id="custom-button" type="button" data-bs-target="#carouselControlsthird" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                 <span class="visually-hidden">Next</span>
+                  </button>
+        </div>
+       </div>
+     </div>
+<!-- ------------------------------control------------------------------- -->
+ <div id="carouselControlsthird" class="carousel slide" data-bs-ride="carousel" data-bs-interval="50000">
+    <div class="carousel-inner">
+      <!-- --------------------------------------------cariusel item 1---------------------------------- -->
+    <div class="carousel-item pb-5 active">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 m-0">
+            <div class="col">
+              <div class="card position-relative text-center border-0"   id="card-items">
+                <img src="images/product-thumb-11.png" class="card-img-top px-5 pt-3" alt="">
+                <div class="card-body">
+                  <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                  <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                  <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                </div>
+                    <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                    <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                      <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                      <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                    </div>
+                
+              </div>
+            </div>
+            <div class="col">
+              <div class="card position-relative text-center border-0"   id="card-items">
+                <img src="images/product-thumb-12.png" class="card-img-top px-5 pt-3" alt="">
+                <div class="card-body">
+                  <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                  <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                  <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                </div>
+                    <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                    <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                      <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                      <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                    </div>
+                
+              </div>
+            </div><div class="col">
+              <div class="card position-relative text-center border-0"   id="card-items">
+                <img src="images/product-thumb-13.png" class="card-img-top px-5 pt-3" alt="">
+                <div class="card-body">
+                  <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                  <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                  <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                </div>
+                    <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                    <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                      <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                      <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                    </div>
+                
+              </div>
+            </div>
+            <div class="col">
+              <div class="card position-relative text-center border-0"   id="card-items">
+                <img src="images/product-thumb-14.png" class="card-img-top px-5 pt-3" alt="">
+                <div class="card-body">
+                  <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                  <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                  <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                </div>
+                    <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                    <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                      <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                      <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                    </div>
+                
+              </div>
+        </div>
+            <div class="col">
+              <div class="card position-relative text-center border-0"   id="card-items">
+                <img src="images/product-thumb-15.png" class="card-img-top px-5 pt-3" alt="">
+                <div class="card-body">
+                  <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                  <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                  <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                </div>
+                    <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                    <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                      <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                      <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                    </div>
+                </div>
+                
+              </div>
+          </div>
+      </div>
+      <!-- ----------------------------------------second slide----------------------- -->
+         <div class="carousel-item pb-5">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 m-0">
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-28.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-26.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div><div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-11.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-12.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-13.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        </div>
+                        
+                      </div>
+          </div>
+      </div>
+<!-- ---------------------------slide item3 ----------------->
+ <div class="carousel-item pb-5">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 m-0">
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-14.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-15.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div><div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-29.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-11.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        
+                      </div>
+                </div>
+                    <div class="col">
+                      <div class="card position-relative text-center border-0"   id="card-items">
+                        <img src="images/product-thumb-18.png" class="card-img-top px-5 pt-3" alt="">
+                        <div class="card-body">
+                          <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+                          <p class="fs-6 text-secondary"><span class="text-warning fs-4">★★★⯪☆</span>(222)</p>
+                          <p class="fs-5"><s class="text-secondary">%24.00</s><b>$18.00</b><span class="border text-secondary ms-2 p-1 fs-6">10%off</span></p>
+                        </div>
+                            <div class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2" id="card-visible">
+                            <input class="form-control p-2 w-25" type="number" value="1" max="20" min="1">
+                              <a class="nav-link btn bg-success p-2 text-white"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              <div class="btn text-center border border-black" id="fav-button" ><i class="fa-regular fa-heart pe-2"></i></div>
+                            </div>
+                        </div>
+                        
+                      </div>
+          </div>
+      </div>
+
+
+  </div>   
+ </div>  
+<!--
+-->
+<!-- 
+ -->
+ <!-- --------------------------fourth carousel-------------------------- -->
+<!-- --------------------------fourth carousel-------------------------- -->
+<div class="container-fluid">
+        <div class="row px-lg-4 pt-5 pb-3">
+            <div class="col-12 col-md-12 col-lg-8 col-xl-9"><h2>Just arrived</h2></div>
+            <div class="col-5 col-sm-3 col-md-2 h-75 my-auto text-md-end"><button class="btn btn-success">View All</button></div>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-1 position-relative d-flex justify-content-">
+              <button class="carousel-control-prev bg-success rounded-2 my-auto" id="custom-button" type="button" data-bs-target="#carouselControlsfourth" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next bg-success rounded-2 my-auto" id="custom-button" type="button" data-bs-target="#carouselControlsfourth" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                 <span class="visually-hidden">Next</span>
+                  </button>
+        </div>
+       </div>
+     </div>
+<!-- ------------------------------control------------------------------- -->
+<div id="carouselControlsfourth"
+  class="carousel slide"
+  data-bs-ride="carousel"
+  data-bs-interval="50000"
+>
+  <div class="carousel-inner">
+    <!-- --------------------------------------------cariusel item 1---------------------------------- -->
+    <div class="carousel-item pb-5 active">
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 m-0"
+      >
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-19.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-20.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-21.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-22.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-30.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------------------------second slide----------------------- -->
+    <div class="carousel-item pb-5">
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 m-0"
+      >
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-24.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-25.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-26.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-27.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-28.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------slide item3 ----------------->
+    <div class="carousel-item pb-5">
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 m-0"
+      >
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-29.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-19.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-24.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-22.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card position-relative text-center border-0"
+            id="card-items"
+          >
+            <img
+              src="images/product-thumb-26.png"
+              class="card-img-top px-5 pt-3"
+              alt=""
+            />
+            <div class="card-body">
+              <h6 class="card-text">Whole Wheat Sandwich Bread</h6>
+              <p class="fs-6 text-secondary">
+                <span class="text-warning fs-4">★★★⯪☆</span>(222)
+              </p>
+              <p class="fs-5">
+                <s class="text-secondary">%24.00</s><b>$18.00</b
+                ><span class="border text-secondary ms-2 p-1 fs-6">10%off</span>
+              </p>
+            </div>
+            <div
+              class="card-text w-100 pb-3 d-flex justify-content-evenly position-absolute bg-white invisible rounded-2"
+              id="card-visible"
+            >
+              <input
+                class="form-control p-2 w-25"
+                type="number"
+                value="1"
+                max="20"
+                min="1"
+              />
+              <a class="nav-link btn bg-success p-2 text-white"
+                ><i class="fa-solid fa-cart-shopping"></i>Add to cart</a
+              >
+              <div class="btn text-center border border-black" id="fav-button" >
+                <i class="fa-regular fa-heart pe-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+-->
+<!-- 
+-->
+<!---------------------------------blog---------------------------- -->
+<div class="row container-fluid d-flex justify-content-between py-2">
+  <h1 class="col-sm-10">Our Recent blog</h1>
+  <button class="col-md-2 col-sm-3 col-4 mx-4 mx-md-0 btn btn-success">View All</button>
+</div>
+<div class="container-fluid pb-4">
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+    <div class="col pt-2">
+      <div class="card p-3">
+      <img src="images/post-thumbnail-1.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+        <div class="card-text text-secondary d-flex gap-3">
+          <p><i class="fa-regular fa-calendar"></i>22 AUG 2021</p>
+          <p><i class="fa-regular fa-folder"></i>TIPS & TRICKS</p>
+        </div>
+        <h2>Top 10 casual look ideas to dress up your kids</h2>
+        <p class="text-secondary">Loreum ipsum dolor sit amet,consectetur adipi elit.Aliquet eleifend viverra enim tincidunt donec quam.A in arcu,hendrerit neque dolor morbi...</p>
+      </div>
+      </div>
+    </div>
+    <div class="col pt-2">
+      <div class="card p-3">
+      <img src="images/post-thumbnail-2.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+        <div class="card-text text-secondary d-flex gap-3">
+          <p><i class="fa-regular fa-calendar"></i>22 AUG 2021</p>
+          <p><i class="fa-regular fa-folder"></i>TIPS & TRICKS</p>
+        </div>
+        <h2>Top 10 casual look ideas to dress up your kids</h2>
+        <p class="text-secondary">Loreum ipsum dolor sit amet,consectetur adipi elit.Aliquet eleifend viverra enim tincidunt donec quam.A in arcu,hendrerit neque dolor morbi...</p>
+      </div>
+      </div>
+    </div>
+    <div class="col pt-2">
+      <div class="card p-3">
+      <img src="images/post-thumbnail-3.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+        <div class="card-text text-secondary d-flex gap-3">
+          <p><i class="fa-regular fa-calendar"></i>22 AUG 2021</p>
+          <p><i class="fa-regular fa-folder"></i>TIPS & TRICKS</p>
+        </div>
+        <h2>Top 10 casual look ideas to dress up your kids</h2>
+        <p class="text-secondary">Loreum ipsum dolor sit amet,consectetur adipi elit.Aliquet eleifend viverra enim tincidunt donec quam.A in arcu,hendrerit neque dolor morbi...</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+-->
+<!-- 
+-->
+<!-- ---------------------play store-------------------- -->
+<div class="container-fluid  py-3">
+  <div class="container bg-warning rounded-5 pt-5 px-md-5">
+    <div class="row  mx-md-auto px-md-5">
+    <div class="col my-md-auto text-center">
+      <h1 class="pt-5">Download Organic App</h1>
+      <p>online Orders made easy,fast and reliable</p>
+      <div class="row btn d-flex gap-3 gap-md-0">
+        <a href="" class="col nav-link"><img src="images/img-app-store.png" alt=""></a>
+        <a href="" class="col nav-link"><img src="images/img-google-play.png" alt=""></a>
+      </div>
+    </div>
+    <img class="col" src="images/banner-onlineapp.png" alt="">
+
+  </div>
+  </div>
+</div>
+<!--
+-->
+<!-- 
+-->
+<!----------------------------buttonsssssss ---------------------- -->
+<div class="container-fluid py-5">
+  <h1 class="ms-2 text-sm-start text-center">People are also looking for</h1>
+  <section>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Blue diamob</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Angie's Boomchickapop Corn</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Salty kettle Corn</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Chobani Greek Yogurt</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Sweet vanilla Yogurt</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Foster Farms Takeout Crispy wings</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Warrior Blend Organic</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Chao Cheese Creamy</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Chicken Meat</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Blue diamonds</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Angie's Boomchixkapop Cornn</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Salty kettle Corn</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Chobani Greek Yogurt</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Sweet Vanilla Yogurt</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Foster Farms Takeout Crispy wings</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Warrior Blend Organic</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Chao Cheese Cremy</div>
+    <div class="btn bg-warning-subtle m-2 text-secondary">Chicken meatballs</div>
+  </section>
+</div>
+<!--
+-->
+<!-- 
+-->
+<!-- -------------------------last page boxes--------------------- -->
+<div class="container-fluid">
+  <div class="row  p-3 gx-4">
+    <div class="col p-4 border rounded-3 me-sm-3 mb-3 mb-lg-0">
+      <i class="mb-4 fs-4 fa-regular fa-truck"></i>
+      <h5>Free delivery</h5>
+      <p>Lorem ipsum dolor sit amet,consectetur adipi elit.</p>
+    </div>
+    <div class="col p-4 border rounded-3 me-sm-3 mb-3 mb-lg-0">
+      <i class="mb-4 fs-4 fa-solid fa-bag-shopping"></i>
+      <h5>100% secure payment</h5>
+      <p>Lorem ipsum dolor sit amet,consectetur adipi elit.</p>
+    </div>
+    <div class="col p-4 border rounded-3 me-sm-3 mb-3 mb-lg-0">
+      <i class="mb-4 fs-4 fa-solid fa-shield-halved"></i>
+      <h5>Quality guarantee</h5>
+      <p>Lorem ipsum dolor sit amet,consectetur adipi elit.</p>
+    </div>
+    <div class="col p-4 border rounded-3 me-sm-3 mb-3 mb-sm-0">
+      <i class="mb-4 fs-4 fa-solid fa-circle-check"></i>
+      <h5>guaranteed savings</h5>
+      <p>Lorem ipsum dolor sit amet,consectetur adipi elit.</p>
+    </div>
+    <div class="col p-4 border rounded-3">
+      <i class="mb-4 fs-4 fa-solid fa-gifts"></i>
+      <h5>Daily offers</h5>
+      <p>Lorem ipsum dolor sit amet,consectetur adipi elit.</p>
+    </div>
+  </div>
+</div>
+<!--
+-->
+<!-- 
+-->
+<!-- -------------------------footer------------------------------ -->
+ <div class="container-fluid">
+  <div class="row py-5">
+        <div class="col-lg-3 col-12 mx-auto text-center text-lg-start border-0 pb-5 pb-lg-0">
+          <img src="images/logo.svg" alt="" height="60px">
+          <div class="text-secondary ms-lg-4 mt-3">
+            <i class="fa-brands fa-facebook-f border fs-4"></i>
+            <i class="fa-brands fa-twitter border fs-4"></i>
+            <i class="fa-brands fa-youtube border fs-4"></i>
+            <i class="fa-brands fa-instagram border fs-4"></i>
+            <i class="fa-brands fa-amazon border fs-4"></i>
+          </div>
+        </div>
+         <div class="col col-7 col-sm-4 col-lg-2  text-secondary">
+          <h5 class="mb-3 text-black" >Organic</h5>
+          <a href="" class="nav-link mb-2">About us</a>
+          <a href="" class="nav-link mb-2">Conditions</a>
+          <a href="" class="nav-link mb-2">Our Journels</a>
+          <a href="" class="nav-link mb-2">Careers</a>
+          <a href="" class="nav-link mb-2">Affiliate Programme</a>
+          <a href="" class="nav-link mb-2">Ultras Press</a>
+        </div>
+        <div class="col-7 col-sm-4 col-lg-2  text-secondary">
+          <h5 class="mb-3 text-black" >Quick Links</h5>
+          <a href="" class="nav-link mb-2">Offers</a>
+          <a href="" class="nav-link mb-2">Discounts</a>
+          <a href="" class="nav-link mb-2">Stores</a>
+          <a href="" class="nav-link mb-2">Track Orders</a>
+          <a href="" class="nav-link mb-2">Shop</a>
+          <a href="" class="nav-link mb-2">info</a>
+        </div>
+        <div class="col col-7 col-sm-4 col-lg-2 text-secondary">
+          <h5 class="mb-3 text-black" >ustomer Services</h5>
+          <a href="" class="nav-link mb-2">FAQ</a>
+          <a href="" class="nav-link mb-2">Contact</a>
+          <a href="" class="nav-link mb-2">Privacy Policy</a>
+          <a href="" class="nav-link mb-2">Returns & Refunds</a>
+          <a href="" class="nav-link mb-2">Cookie Guidelines</a>
+          <a href="" class="nav-link mb-2">Delivery Information</a>
+        </div>
+        <div class="col-lg-3 col-md-10 col-12 mt-4 mt-lg-0 mx-auto ">
+          <h5 class="mb-3">Subscribe Us</h5>
+          <p>Subscribe toour newsletter to get updates about our grand offers.</p>
+            <div class="input-group">
+              <input type="email" class="form-control"  placeholder="Email Address"> 
+              <div class="btn btn-dark input-group-text"><a href="" class="nav-link">Subscribe</a></div>
+             </div>
+        </div>
+       
+  </div>
+ </div>
+<div class="section row px-4 py-2  g-0 d-flex text-secondary">
+  <p class="col-12 col-md-6"><i class="fa-regular fa-copyright"></i>2024 organic.All rights reserved.</p>
+  <p class="col  text-md-end">HTML Template by <a href="" class="text-black">KRISH</a>Distributed By <a href="" class="text-black">GitHub</a></p>
+</div>
+ <!--
+-->
+<!-- 
+-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>
