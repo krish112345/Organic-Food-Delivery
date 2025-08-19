@@ -39,6 +39,18 @@
     background-color: black;
     color: white;
   }
+  #animate-link::after{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: white;
+    width: 0px;
+    transition: 0.3s linear;
+  }
+  #animate-link:hover::after{
+    width: 130px;
+  }
+ 
 </style>
 </head>
   <!-- -----------------------------------------------------body start here------------------------------------------------------------- -->
@@ -100,19 +112,19 @@
                   <span class="fw-bold text-black fs-5">PAGES</span>
                 </a>
                 <ul class="dropdown-menu border-0 p-2">
-                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">ABOUT US</a></li>
+                  <li><a class="dropdown-item text-secondary" href="#">ABOUT US</a></li>
                   <li>
                     <a class="dropdown-item text-secondary" href="#">SHOP</a>
                   </li>
-                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">SINGLE PRODUCT</a></li>
+                  <li><a class="dropdown-item text-secondary" href="#">SINGLE PRODUCT</a></li>
                   <li><a class="dropdown-item text-secondary " href="#">CART</a></li>
-                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">CHECKOUT</a></li>
+                  <li><a class="dropdown-item text-secondary" href="#">CHECKOUT</a></li>
                   <li><a class="dropdown-item text-secondary " href="#">BLOG</a></li>
-                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">SIGNLE POST</a></li>
+                  <li><a class="dropdown-item text-secondary" href="#">SIGNLE POST</a></li>
                   <li><a class="dropdown-item text-secondary" href="#">STYLES</a></li>
-                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">CONTACT</a></li>
+                  <li><a class="dropdown-item text-secondary" href="#">CONTACT</a></li>
                   <li><a class="dropdown-item text-secondary" href="#">THANK YOU</a></li>
-                  <li><a class="dropdown-item text-secondary bg-success-subtle" href="#">MY ACCOUNT</a></li>
+                  <li><a class="dropdown-item text-secondary" href="#">MY ACCOUNT</a></li>
                   <li><a class="dropdown-item text-secondary" href="#">404 ERROR</a></li>
                   
                   
@@ -236,16 +248,26 @@
             </tr>
             <tr>
               <td>
-                 <a class="nav-link" href=""
-              ><i class="fa-solid fa-wine-bottle me-3 fs-3"></i></i>Beverages</a
+            <a class="nav-link" href=""
+              ><i class="fa-solid fa-mortar-pestle me-3 fs-3"></i></i>Spices and Seasonings</a
             >
               </td>
             </tr>
             <tr>
               <td>
-                <a class="nav-link" href=""
-              ><i class="fa-solid fa-mortar-pestle me-3 fs-3"></i></i>Spices and Seasonings</a
-            >
+                
+            <div class="dropdown">
+                    <button class="dropdown-toggle border-0 w-100 m-0 text-start bg-white" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-wine-bottle me-3 fs-3"></i></i>Beverages
+                    </button>
+                    <ul class="dropdown-menu w-100 position-relative mb-5 border-0 " aria-labelledby="dropdownMenu">
+                      <li><a class="dropdown-item" href="#">Water</a></li>
+                      <li><a class="dropdown-item" href="#">Jucies</a></li>
+                      <li><a class="dropdown-item" href="#">Soda</a></li>
+                      <li><a class="dropdown-item" href="#">Tea</a></li>
+
+                    </ul>
+                  </div>
               </td>
             </tr>
             <tr>
@@ -341,7 +363,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="d-flex justify-content-between bg-success-subtle">
+                <td class="d-flex justify-content-between">
                   <h5>Total(USD)</h5>
                   <h5>$25</h5>
                 </td>
@@ -733,20 +755,20 @@
     <div class="col-md-12 col-lg-7 p-5" style="background-image: url(images/banner-ad-1.jpg);" >
       <h2 class="pt-5 mt-0 mt-lg-5">Items on SALE</h2>
       <p>Discounts up to 30%</p>
-      <h4><a class="nav-link pb-lg-5 mb-lg-5" href="#" >SHOP NOW</a></h4>
+      <h4><a class="nav-link pb-lg-5 mb-lg-5" id="animate-link" href="#" >SHOP NOW</a></h4>
     </div>
     <div class="col-lg-5 col-md-12 ps-lg-5 ">
       <div class="row h-100 d-flex gap-3">
         <div class="col-12 p-5" style="background-image: url(images/banner-ad-2.jpg); background-size: cover;">
           <h4 class=""><b>Combo offers</b></h4>
           <p>Discounts up to 50%</p>
-          <h4><a class="nav-link" id="animate-link" href="#" >SHOP NOW</a></h4>
+          <h4><a class="nav-link "id="animate-link"  href="#" >SHOP NOW</a></h4>
 
         </div>
         <div class="col-12 p-5" style="background-image: url(images/banner-ad-3.jpg); background-size: cover">
           <h4><b>Discount Coupons</b></h4>
           <p>Discounts up to 40%</p>
-          <h4><a class="nav-link" href="#" >SHOP NOW</a></h4>
+          <h4><a class="nav-link" id="animate-link" href="#" >SHOP NOW</a></h4>
         </div>
       </div>
     </div>
